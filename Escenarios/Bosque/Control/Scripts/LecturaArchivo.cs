@@ -12,7 +12,7 @@ public class LecturaArchivo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pathFile = "Assets/Recursos/coordenadas.txt";
+        pathFile = "Assets/Recursos Generales/Control/coordenadas.txt";
         lectura();
     }
 

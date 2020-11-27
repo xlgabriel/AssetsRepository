@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemCollection>
+  <Items>
+    <Item nombre="Carlos">
+      <Tiempo>90</Tiempo>
+      <Puntaje>28000</Puntaje>
+    </Item>
+    <Item nombre="KING">
+      <Tiempo>80</Tiempo>
+      <Puntaje>25000</Puntaje>
+    </Item>
+    <Item nombre="perlita">
+      <Tiempo>96</Tiempo>
+      <Puntaje>31000</Puntaje>
+    </Item>
+  </Items>
+</ItemCollection>

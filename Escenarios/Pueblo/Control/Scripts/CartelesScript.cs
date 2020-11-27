@@ -6,9 +6,7 @@ using TMPro;
 //Código hecho por Gabriel Jeannot - 2185887
 public class CartelesScript : MonoBehaviour
 {
-    public GameObject CartelEspecifico;
-    public GameObject GUIMostrar;
-    public TMP_Text Texto;
+    
     
 
     public void Update()
@@ -28,12 +26,12 @@ public class CartelesScript : MonoBehaviour
 
                     if (rb = hit.transform.GetComponent<Rigidbody>())
                     {
-                        PopUp();
+                        ZoomToObject();
 
                     }
                     if (Input.GetKeyDown(KeyCode.Escape))
                     {
-                        PopOff();
+                        
                     }
 
 
@@ -48,14 +46,11 @@ public class CartelesScript : MonoBehaviour
         print(go.name);
     }
 
-    public void PopUp()
+    public void ZoomToObject()
     {
-        GUIMostrar.SetActive(true);
+        
     }
 
-    public void PopOff()
-    {
-        GUIMostrar.SetActive(false);
-    }
+   
 
 }
