@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-//Código hecho por Gabriel Jeannot - 2185887
+
 public class CartelesScript : MonoBehaviour
 {
-    
-    
+    public GameObject PanelImagenPozo;
+    public GameObject PanelImagenMercado;
+    public GameObject PanelImagenTortura;
+    public GameObject PanelImagenCasa;
+
+    public GameObject CartelPozo;
+    public GameObject CartelMercado;
+    public GameObject CartelTortura;
+    public GameObject CartelCasa;
 
     public void Update()
     {
@@ -17,23 +24,36 @@ public class CartelesScript : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 100.0f))
+        if (Physics.Raycast(ray, out hit, 600.0f))
         {
-            if (hit.transform != null)
-            {
-
-                    Rigidbody rb;
-
-                    if (rb = hit.transform.GetComponent<Rigidbody>())
+                if (hit.transform != null)
+                {
+                    
+                    
+                    Debug.Log("Nombre: " + hit.collider.gameObject.name);
+                    if (CartelCasa.name.Equals(hit.collider.gameObject.name))
                     {
-                        ZoomToObject();
+                        PanelImagenCasa.SetActive(true);
 
                     }
-                    if (Input.GetKeyDown(KeyCode.Escape))
+
+                    if (CartelPozo.name.Equals(hit.collider.gameObject.name))
                     {
-                        
+                        PanelImagenPozo.SetActive(true);
+
                     }
 
+                    if (CartelMercado.name.Equals(hit.collider.gameObject.name))
+                    {
+                        PanelImagenMercado.SetActive(true);
+
+                    }
+
+                    if (CartelTortura.name.Equals(hit.collider.gameObject.name))
+                    {
+                        PanelImagenTortura.SetActive(true);
+
+                    }
 
                 }
         }
@@ -41,16 +61,13 @@ public class CartelesScript : MonoBehaviour
         }
     }
 
-    private void PrintName(GameObject go)
-    {
-        print(go.name);
-    }
-
-    public void ZoomToObject()
+    public void CerrarImagen()
     {
         
+        PanelImagenCasa.SetActive(false);
+        PanelImagenPozo.SetActive(false);
+        PanelImagenTortura.SetActive(false);
+        PanelImagenMercado.SetActive(false);
+
     }
-
-   
-
 }

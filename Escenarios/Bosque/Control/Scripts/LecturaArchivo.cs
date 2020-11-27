@@ -12,7 +12,7 @@ public class LecturaArchivo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pathFile = "Assets/Recursos Generales/Control/coordenadas.txt";
+        pathFile = "Assets/Escenarios/Bosque/Control/coordenadas.txt";
         lectura();
     }
 
@@ -29,16 +29,17 @@ public class LecturaArchivo : MonoBehaviour
 
         for(int i=0; i< fileline.Length; i++)
         {
-            string[] partes = fileline[i].Split("/"[0]);
-            float x = float.Parse(partes[0]);
-            float y = float.Parse(partes[1]);
-            float z = float.Parse(partes[2]);
+
+            string[] partesNuevas = fileline[i].Split("/"[0]);
+            float x = float.Parse(partesNuevas[0]);
+            float y = float.Parse(partesNuevas[1]);
+            float z = float.Parse(partesNuevas[2]);
             posiciones[i] = new Vector3(x, y, z);
         }
 
         for(int i=0; i < posiciones.Length; i++)
         {
-            Debug.Log("Árbol ubicado en: " + posiciones[i].ToString());
+            Debug.Log("Nuevo árbol ubicado: " + posiciones[i].ToString());
         }
 
     }

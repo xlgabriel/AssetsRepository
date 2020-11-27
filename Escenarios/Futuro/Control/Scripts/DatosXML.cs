@@ -24,3 +24,9 @@ public class ItemEntry
     public int puntajefinal;
     public int tiemporecorrido;
 }
+
+[System.Serializable]
+public class ItemDataBase
+{
+   
+}
