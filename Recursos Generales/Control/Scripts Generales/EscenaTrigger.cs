@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PuebloTrigger : MonoBehaviour
+public class EscenaTrigger : MonoBehaviour
 {
-    
+    public int NumeroEscena;
+
 
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(NumeroEscena);
     }
-
 }
