@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Serialization;
 using System.Xml;
+using System.IO;
 
 public class DatosXML
 {
 
-    [XmlAttribute("Nombre")]
-    public string nombre;
+    public static DatosXML ins;
 
-    [XmlElement("Tiempo")]
-    public int tiempo;
+    void Awake()
+    {
+        ins = this;
+    }
 
-    [XmlElement("Puntaje")]
-    public int puntaje;
+}
 
+[System.Serializable]
+public class ItemEntry
+{
+    public string nombreJugador;
+    public int puntajefinal;
+    public int tiemporecorrido;
 }
